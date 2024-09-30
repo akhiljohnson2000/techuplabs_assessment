@@ -1,14 +1,14 @@
-<form [formGroup]="profileForm" (change)="printFormData($event)" (submit)="createCustomer()">
-    <label for="first-name">Title: </label>
-    <input id="first-name" type="text" formControlName="title">
-    <label for="last-name">Email: </label>
-    <input id="last-name" type="email" formControlName="emailid">
+<form class="general-form" [formGroup]="customerCreationForm" (submit)="createCustomer()">
+    <label for="first-name">Title*: </label>
+    <input id="first-name" type="text" formControlName="title"><br>
+    <label for="last-name">Email*: </label>
+    <input id="last-name" type="email" formControlName="emailid"><br>
 
-    <label for="last-name">Region: </label>
-    <ngx-select [items]="regionsAvailable" formControlName="region" ></ngx-select>
+    <label for="last-name">Region*: </label>
+    <ngx-select [items]="regionsAvailable" formControlName="region" ></ngx-select><br>
 
-    <label for="last-name">Country: </label>
-    <ngx-select [items]="countriesAvailable" formControlName="country"></ngx-select>
+    <label for="last-name">Country*: </label>
+    <ngx-select [items]="countriesAvailable" formControlName="country"></ngx-select><br>
 
-    <button type="submit">Create Customer</button>
+    <button type="submit" [disabled]="!customerCreationForm?.valid" class="btn btn-primary">Create Customer</button>
 </form>

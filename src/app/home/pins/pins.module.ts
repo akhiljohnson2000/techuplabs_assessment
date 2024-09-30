@@ -8,6 +8,8 @@ import { CreateCustomerComponent } from '../customers/create-customer/create-cus
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { NgxSelectModule } from 'ngx-select-ex';
+import { CreatePinComponent } from './create-pin/create-pin.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -15,18 +17,21 @@ import { NgxSelectModule } from 'ngx-select-ex';
   declarations: [
     PinsComponent,
     ListComponent,
-    CreateCustomerComponent],
+    CreateCustomerComponent,
+    CreatePinComponent],
   imports: [
     CommonModule,
     PinsRoutingModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
     NgxSelectModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule
   ],
   exports:[
     PinsComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    CreatePinComponent
   ],
   providers:[provideHttpClient()]
 })

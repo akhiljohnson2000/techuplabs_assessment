@@ -1,0 +1,79 @@
+{
+  "hash": "4c804093",
+  "configHash": "565e22e8",
+  "lockfileHash": "ce0b03a8",
+  "browserHash": "5666508d",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "235e7c2f",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "1a173f2e",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "dc482826",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "a0d211ed",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "b644b4a4",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "b8ae891c",
+      "needsInterop": false
+    },
+    "ngx-bootstrap/modal": {
+      "src": "../../../../../node_modules/ngx-bootstrap/modal/fesm2022/ngx-bootstrap-modal.mjs",
+      "file": "ngx-bootstrap_modal.js",
+      "fileHash": "66663b2a",
+      "needsInterop": false
+    },
+    "ngx-select-ex": {
+      "src": "../../../../../node_modules/ngx-select-ex/fesm2020/ngx-select-ex.mjs",
+      "file": "ngx-select-ex.js",
+      "fileHash": "bf3d3c89",
+      "needsInterop": false
+    },
+    "ng2-file-upload": {
+      "src": "../../../../../node_modules/ng2-file-upload/fesm2022/ng2-file-upload.mjs",
+      "file": "ng2-file-upload.js",
+      "fileHash": "69b44657",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-JYOXV4ZG": {
+      "file": "chunk-JYOXV4ZG.js"
+    },
+    "chunk-GEG2VAE5": {
+      "file": "chunk-GEG2VAE5.js"
+    },
+    "chunk-GIVMQZEA": {
+      "file": "chunk-GIVMQZEA.js"
+    },
+    "chunk-IJQEN57T": {
+      "file": "chunk-IJQEN57T.js"
+    },
+    "chunk-YQ5U2F2Z": {
+      "file": "chunk-YQ5U2F2Z.js"
+    }
+  }
+}

@@ -1,13 +1,65 @@
-<button type="button" class="btn btn-primary" (click)="openModal(template)">Add Customer</button>
- 
-<ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Create a customer</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
+<div class="container">
+  <div class="header-add-buttons">
+    <button type="button" class="btn btn-primary width-20" (click)="openModal(createCustomerModal)">+ Add
+      Customer</button>
+    <ng-template #createCustomerModal>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Create a customer</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-create-customer></app-create-customer>
+      </div>
+    </ng-template>
+    <br>
+
+    <button type="button" class="btn btn-primary width-20" (click)="openModal(createPinModal)">+ Add Pins</button>
+    <ng-template #createPinModal>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Add Pin</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-create-pin></app-create-pin>
+      </div>
+    </ng-template>
   </div>
-  <div class="modal-body">
-    <app-create-customer></app-create-customer>
+
+  <div class="list-body">
+    <div class="list-container">
+      <table>
+        <thead>
+          <tr>
+            <th class="list-box">Title</th>
+            <th class="list-box">Image</th>
+            <th class="list-box">Collaboratory</th>
+            <th class="list-box">Privacy</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let pin of pinsData" >
+            <td class="list-box">{{ pin.title }}</td>
+            <td class="list-box">{{ pin.image }}</td>
+            <td class="list-box">
+              <span *ngFor="let collab of pin?.collaboratory" style="display: block;">
+                {{ collab?.title }}
+              </span>
+            </td>
+            <td class="list-box">{{ pin.privacy }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="list-container"> 
+      <div  *ngFor="let pin of pinsData">
+
+      </div>
+    </div>
+
   </div>
-</ng-template>
+</div>

@@ -1,1 +1,33 @@
-<p>create-pin works!</p>
+<form class="general-form" [formGroup]="pinsCreationForm" (submit)="createPin()">
+    <label for="first-name">Title*: </label>
+    <input id="first-name" type="text" formControlName="title"><br>
+
+    <label for="last-name">Select Image*: </label>
+    <div ng2FileDrop class="file-upload-ui"
+        [ngClass]="{'file-upload-ui': !imageHover, 'file-upload-drop-ui': imageHover}" (onFileDrop)="dropped($event)"
+        [uploader]="uploader" class="well my-drop-zone">
+        <span *ngIf="!imageFile">Choose and Drag and Drop file here</span>
+        <span *ngIf="imageFile">{{imageFile[0]?.name}}</span>
+    </div><br>
+
+    <label for="last-name">Select Collaboratory*: </label>
+    <ngx-select [items]="usersAvailable" [multiple]="true" formControlName="collaboratory"></ngx-select><br>
+
+    <div class="radio-group">
+        <label for="last-name">Privacy*: </label>
+
+        <div class="custom-control custom-radio">
+            <input id="Private" type="radio" class="custom-control-input" value="private" name="privacy" formControlName="privacy">
+            <label class="custom-control-label" for="Private">Private</label>
+        </div>
+    
+        <div class="custom-control custom-radio">
+            <input id="Public" type="radio" class="custom-control-input" value="public" name="privacy" formControlName="privacy">
+            <label class="custom-control-label" for="Public">Public</label>
+        </div>
+    </div><br>
+  
+
+
+    <button type="submit" [disabled]="!pinsCreationForm?.valid" class="btn btn-primary">Create Pin</button>
+</form>
